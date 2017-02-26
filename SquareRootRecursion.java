@@ -1,16 +1,19 @@
 public class SquareRootRecursion{
   
-  public static double babylSqrt(double x, double sqrt, double error){ 
-    double newSqrt
-    if(error <= ((sqrt*sqrt)-x){
-      return sqrt;
+  public static double babylSqrt(double sqrt, double x){ 
+    if((sqrt*sqrt)> x-0.1 &&(sqrt*sqrt) < x +0.1){
+    return sqrt;
     }
-    else{
-    newSqrt = 0.5*(sqrt + x / aqrt);
-    return babylSqrt(x, sqrt, error);
-    }
+    else
+      return babylSqrt(sqrt - 0.1, x);
+  }
+  public static double getSqrt(double x){
+    return babylSqrt(x,x);
   }
 public static void main(String[]args){
+   
+        System.out.println(getSqrt(36));
+
 
 }
 
